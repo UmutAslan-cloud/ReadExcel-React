@@ -5,7 +5,7 @@ export default function Table(){
 return (
     <div>
         <input type="file" onChange={(e)=>{
-            const file=e.target.file[0];
+            const file=e.target.files[0];
             let data=readExcel(file)
             data.then((d)=>{
                 d.map(person=>{
